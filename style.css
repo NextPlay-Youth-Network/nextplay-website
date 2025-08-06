@@ -1,0 +1,26 @@
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  background-color: #F5F5F5;
+}
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.section-background {
+  padding: 60px 20px;
+  border-radius: 12px;
+  background: linear-gradient(to bottom right, #f5f5f5, #e6f9ff);
+}
+.sqs-block-button-element--large {
+  background-color: #F9C349;
+  color: #333333;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+}
