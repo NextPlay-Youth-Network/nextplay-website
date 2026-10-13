@@ -115,7 +115,8 @@
   .invalid .chip span{ border-color:var(--error);}
 
   /* division cards */
-  .divisions{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px;}
+  .divisions{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px;}
+  @media (max-width:700px){ .divisions{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
   .division{ position:relative; cursor:pointer;}
   .division input{ position:absolute; opacity:0; width:1px; height:1px;}
   .division .dcard{ display:flex; flex-direction:column; align-items:flex-start; gap:6px; height:100%; padding:16px; border:2px solid var(--line); border-radius:14px; transition:all .15s ease; background:var(--paper);}
@@ -123,6 +124,8 @@
   .division img{ width:52px; height:52px; object-fit:contain;}
   .division b{ font-size:16px; color:var(--navy); font-weight:800;}
   .division small{ font-size:11.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;}
+  .division.sprouts small{ color:#2E8B3E;}
+  .division.sprouts input:checked + .dcard{ border-color:#3FA34D; background:rgba(63,163,77,0.08);}
   .division.crown small{ color:var(--orchid);}
   .division.compass small{ color:var(--royal);}
   .division.bridge small{ color:var(--turq-ink);}
@@ -253,7 +256,7 @@
     <button class="door" role="tab" id="tab-enroll" data-tab="enroll" aria-controls="panel-enroll" aria-selected="false">
       <span class="door-tag">Parents &amp; guardians</span>
       <h2>Youth Enrollment Intake</h2>
-      <p>Register a young person for The Crown, The Compass, or Bridge Division.</p>
+      <p>Register a young person for Sprouts, The Crown, The Compass, or Bridge Division.</p>
       <span class="door-time">About 8 minutes</span>
     </button>
     <button class="door" role="tab" id="tab-mentor" data-tab="mentor" aria-controls="panel-mentor" aria-selected="false">
@@ -309,12 +312,13 @@
             <div class="field full" data-group="interests" data-min="1">
               <span class="group-label" id="i-int-label">Programs and opportunities<span class="req">*</span></span>
               <div class="chips" role="group" aria-labelledby="i-int-label">
+                <label class="chip"><input type="checkbox" id="i-int-sprouts" name="interests" value="Sprouts" /><span>Sprouts</span></label>
                 <label class="chip"><input type="checkbox" id="i-int-crown" name="interests" value="The Crown" /><span>The Crown</span></label>
                 <label class="chip"><input type="checkbox" id="i-int-compass" name="interests" value="The Compass" /><span>The Compass</span></label>
                 <label class="chip"><input type="checkbox" id="i-int-bridge" name="interests" value="Bridge Division" /><span>Bridge Division</span></label>
                 <label class="chip"><input type="checkbox" id="i-int-code" name="interests" value="Code Lab" /><span>Code Lab <em class="soon">Soon</em></span></label>
                 <label class="chip"><input type="checkbox" id="i-int-events" name="interests" value="Community events" /><span>Community events</span></label>
-                <label class="chip"><input type="checkbox" id="i-int-sensory" name="interests" value="Sensory-friendly programming" /><span>Sensory-friendly programming</span></label>
+                <label class="chip"><input type="checkbox" id="i-int-sensory" name="interests" value="Sensory-friendly programming" /><span>Sensory-Friendly Nights</span></label>
                 <label class="chip"><input type="checkbox" id="i-int-sports" name="interests" value="Sports and recreation" /><span>Sports &amp; recreation</span></label>
               </div>
             </div>
@@ -378,7 +382,7 @@
             <div class="field"><label for="e-y-pref">Name they go by <span class="opt">(optional)</span></label><input type="text" id="e-y-pref" name="youth_preferred_name" /></div>
             <div class="field"><label for="e-y-dob">Date of birth<span class="req">*</span></label><input type="date" id="e-y-dob" name="youth_dob" required /></div>
             <div class="field"><label for="e-y-grade">Grade this school year<span class="req">*</span></label>
-              <select id="e-y-grade" name="youth_grade" required><option value="">Select</option><option>3rd</option><option>4th</option><option>5th</option><option>6th</option><option>7th</option><option>8th</option><option>9th</option><option>10th</option><option>11th</option><option>12th</option><option>Not currently enrolled</option></select></div>
+              <select id="e-y-grade" name="youth_grade" required><option value="">Select</option><option>Kindergarten</option><option>1st</option><option>2nd</option><option>3rd</option><option>4th</option><option>5th</option><option>6th</option><option>7th</option><option>8th</option><option>9th</option><option>10th</option><option>11th</option><option>12th</option><option>Not currently enrolled</option></select></div>
             <div class="field"><label for="e-y-school">School</label><input type="text" id="e-y-school" name="youth_school" placeholder="School name" /></div>
             <div class="field"><label for="e-y-shirt">T-shirt size</label>
               <select id="e-y-shirt" name="youth_shirt_size"><option value="">Select</option><option>Youth S</option><option>Youth M</option><option>Youth L</option><option>Adult S</option><option>Adult M</option><option>Adult L</option><option>Adult XL</option><option>Adult 2XL</option></select></div>
@@ -391,7 +395,8 @@
             <div class="field full" data-group="division">
               <span class="group-label" id="e-div-label">Division<span class="req">*</span></span>
               <div class="divisions" role="radiogroup" aria-labelledby="e-div-label">
-                <label class="division crown"><input type="radio" id="e-div-crown" name="division" value="The Crown" required /><span class="dcard"><img src="crown-emblem.png" alt="" /><div><small>For girls</small><b>The Crown</b></div></span></label>
+                <label class="division sprouts"><input type="radio" id="e-div-sprouts" name="division" value="Sprouts" required /><span class="dcard"><img src="sprouts-emblem.png" alt="" /><div><small>Elementary</small><b>Sprouts</b></div></span></label>
+                <label class="division crown"><input type="radio" id="e-div-crown" name="division" value="The Crown" /><span class="dcard"><img src="crown-emblem.png" alt="" /><div><small>For girls</small><b>The Crown</b></div></span></label>
                 <label class="division compass"><input type="radio" id="e-div-compass" name="division" value="The Compass" /><span class="dcard"><img src="compass-emblem.png" alt="" /><div><small>For boys</small><b>The Compass</b></div></span></label>
                 <label class="division bridge"><input type="radio" id="e-div-bridge" name="division" value="Bridge Division" /><span class="dcard"><img src="bridge-emblem.png" alt="" /><div><small>High school</small><b>Bridge Division</b></div></span></label>
               </div>
@@ -513,6 +518,7 @@
             <div class="field full">
               <span class="group-label" id="m-div-label">Division preference <span class="opt">(optional)</span></span>
               <div class="chips" role="group" aria-labelledby="m-div-label">
+                <label class="chip"><input type="checkbox" id="m-d-sprouts" name="division_pref" value="Sprouts" /><span>Sprouts</span></label>
                 <label class="chip"><input type="checkbox" id="m-d-crown" name="division_pref" value="The Crown" /><span>The Crown</span></label>
                 <label class="chip"><input type="checkbox" id="m-d-compass" name="division_pref" value="The Compass" /><span>The Compass</span></label>
                 <label class="chip"><input type="checkbox" id="m-d-bridge" name="division_pref" value="Bridge Division" /><span>Bridge Division</span></label>
