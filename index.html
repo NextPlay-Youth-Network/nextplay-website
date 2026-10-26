@@ -201,6 +201,8 @@
   .social-row a:hover{ background:var(--gold); border-color:var(--gold); color:var(--navy); transform:translateY(-3px); }
   .footer-bottom{ padding-top:26px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
   .footer-bottom p{ font-size:12.5px; color:#9AA3B8;}
+  .footer-legal{ font-size:12.5px; color:#9AA3B8; margin-top:14px;}
+  .involved-card .gift-note{ font-size:12px; margin-top:12px;}
 
 
   /* ---------- CODE LAB TEASER ---------- */
@@ -252,7 +254,7 @@
       <li><a href="#involved">Get Involved</a></li>
       <li><a href="join.html#volunteer">Volunteer</a></li>
       <li><a href="join.html#enroll">Enroll</a></li>
-      <li><a href="donate.html">Donate</a></li>
+      <li><a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-27430" target="_blank" rel="noopener">Donate</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="join.html" class="nav-cta">Join Us</a>
@@ -346,7 +348,7 @@
     </div>
     <div class="programs-grid">
       <div class="program-card sprouts reveal">
-        <div class="program-badge"><img src="sprouts-emblem.svg" alt="The Sprouts emblem" /></div>
+        <div class="program-badge"><img src="sprouts-emblem.png" alt="The Sprouts emblem" /></div>
         <div>
           <span class="program-tag">Elementary</span>
           <h3>The Sprouts</h3>
@@ -457,7 +459,8 @@
         </div>
         <h3>Give</h3>
         <p>Your support funds mentorship, supplies, and community events for local youth.</p>
-        <a href="donate.html" class="link">Donate now &rarr;</a>
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-27430" class="link" target="_blank" rel="noopener">Donate now &rarr;</a>
+        <p class="gift-note">Your gift is tax-deductible to the extent allowed by law. Nextplay Youth Network is a 501(c)(3) nonprofit organization, EIN <span style="white-space:nowrap">39-3434378</span>.</p>
       </div>
     </div>
   </div>
@@ -488,6 +491,7 @@
       <p>&copy; 2026 Nextplay Youth Network. All rights reserved.</p>
       <p>Mastering the details to empower the big picture.</p>
     </div>
+    <p class="footer-legal">Nextplay Youth Network is a registered 501(c)(3) nonprofit organization in good standing. EIN: <span style="white-space:nowrap">39-3434378</span>.</p>
   </div>
 </footer>
 
@@ -527,85 +531,6 @@
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
 </script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>NextPlay Youth Network</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Meta Description -->
-  <meta name="description" content="NextPlay Youth Network provides sensory-friendly sports and wellness programs for neurodivergent and underserved youth in Lansing, IL.">
-
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="NextPlay Youth Network">
-  <meta property="og:description" content="Where Every Child Has a Place to Play.">
-  <meta property="og:image" content="images/og-banner.png">
-  <meta property="og:url" content="https://yourusername.github.io/nextplay-website">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NextPlay Youth Network">
-  <meta name="twitter:description" content="Where Every Child Has a Place to Play.">
-  <meta name="twitter:image" content="images/og-banner.png">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <section class="hero section-background">
-    <h1>Where Every Child Has a Place to Play</h1>
-    <p>Inclusive, sensory-friendly sports & wellness programs for youth in Lansing, IL.</p>
-    <a href="https://gofundme.com/your-donation-link" class="sqs-block-button-element--large">Donate Now</a>
-    <a href="#get-involved" class="sqs-block-button-element--large" style="background-color:#8BC540;">Get Involved</a>
-  </section>
-
-  <section class="about section-background">
-    <h2>Our Mission</h2>
-    <p>NextPlay Youth Network empowers neurodivergent and underserved youth through sensory-safe, inclusive programming and sports engagement.</p>
-  </section>
-
-  <section class="events section-background">
-    <h2>Upcoming Events</h2>
-    <div class="event-card">
-      <h3>🎂 Royce’s Birthday Soft Launch (Private)</h3>
-      <p>Date TBD • Sensory-friendly closed event</p>
-    </div>
-    <div class="event-card">
-      <h3>🎃 Inclusive Halloween Night</h3>
-      <p>October 2025 • Costumes, quiet zones, adaptive fun</p>
-    </div>
-    <div class="event-card">
-      <h3>🏅 Adaptive Sports Clinics</h3>
-      <p>Spring 2026 • Multi-sport, accessible coaching</p>
-    </div>
-  </section>
-
-  <section class="donations section-background">
-    <h2>Give the Gift of Play</h2>
-    <div class="donation-tier"><strong>$25</strong><br>Supplies for one activity kit</div>
-    <div class="donation-tier"><strong>$50</strong><br>One-month sponsorship for a child</div>
-    <div class="donation-tier"><strong>$100</strong><br>Funds a community event experience</div>
-    <div class="donation-tier"><strong>Any Amount</strong><br>Every bit helps create safe, inclusive joy!</div>
-    <a href="https://gofundme.com/your-donation-link" class="sqs-block-button-element--large">Donate Now</a>
-  </section>
-
-  <!-- Footer Tracking Scripts -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 
 </body>
 </html>
