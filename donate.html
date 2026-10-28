@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Nextplay Youth Network</title>
+  <meta name="description" content="Support Nextplay Youth Network, a Lansing, IL 501(c)(3) offering mentorship and sensory-friendly programs for youth. Every gift is tax-deductible to the extent allowed by law.">
+  <meta property="og:title" content="Give the Gift of Play | Nextplay Youth Network">
+  <meta property="og:description" content="Fund mentorship, sensory-friendly events, and real opportunities for Lansing youth.">
+  <meta property="og:image" content="og-banner.png">
+  <meta property="og:url" content="https://nextplayyouthnetwork.org/donate.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --turquoise: #00B8C8;
+      --royal: #2864DC;
+      --orchid: #B640CF;
+      --gold: #FFC72C;
+      --navy: #17233D;
+      --white: #FFFFFF;
+      --soft: #F2FBFC;
+      --sprout: #5DBB63;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--navy); background: var(--white); line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; line-height: 1.15; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* Nav */
+    nav { background: var(--navy); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+    nav .brand { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--white); text-decoration: none; }
+    nav .brand span { color: var(--turquoise); }
+    nav ul { list-style: none; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    nav ul a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+    nav ul a:hover { color: var(--gold); }
+    .nav-donate { background: var(--gold); color: var(--navy) !important; padding: 8px 18px; border-radius: 999px; font-weight: 700 !important; }
+
+    /* Hero */
+    .hero { background: var(--turquoise); color: var(--white); padding: 72px 0 64px; text-align: center; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; margin-bottom: 14px; }
+    .hero p { font-size: 1.15rem; max-width: 640px; margin: 0 auto 28px; }
+    .btn { display: inline-block; font-weight: 700; text-decoration: none; border-radius: 999px; padding: 14px 32px; font-size: 1.05rem; transition: transform .15s ease, box-shadow .15s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(23,35,61,.18); }
+    .btn-gold { background: var(--gold); color: var(--navy); }
+    .btn-navy { background: var(--navy); color: var(--white); }
+    .btn-outline { border: 2px solid var(--white); color: var(--white); margin-left: 8px; }
+    .trust { margin-top: 18px; font-size: 0.9rem; opacity: .95; }
+
+    section { padding: 64px 0; }
+    .section-title { text-align: center; font-size: clamp(1.6rem, 3.5vw, 2.25rem); margin-bottom: 10px; }
+    .section-sub { text-align: center; max-width: 620px; margin: 0 auto 40px; }
+
+    /* Impact tiers */
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .tier { background: var(--soft); border-radius: 16px; padding: 28px 22px; border-top: 6px solid var(--turquoise); }
+    .tier:nth-child(2) { border-top-color: var(--royal); }
+    .tier:nth-child(3) { border-top-color: var(--orchid); }
+    .tier:nth-child(4) { border-top-color: var(--gold); }
+    .tier .amt { font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.25rem; font-weight: 800; }
+    .tier p { margin-top: 6px; }
+
+    /* Divisions */
+    .divisions { background: var(--soft); }
+    .div-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .div-card { background: var(--white); border-radius: 16px; padding: 26px 22px; box-shadow: 0 2px 10px rgba(23,35,61,.06); }
+    .div-card h3 { font-size: 1.3rem; margin-bottom: 4px; }
+    .div-card .who { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+    .sprouts h3, .sprouts .who { color: var(--sprout); }
+    .crown h3, .crown .who { color: var(--orchid); }
+    .compass h3, .compass .who { color: var(--royal); }
+    .bridge h3, .bridge .who { color: var(--turquoise); }
+
+    /* Other ways */
+    .ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .way { border: 2px solid #E3EEF0; border-radius: 16px; padding: 24px 22px; }
+    .way h3 { font-size: 1.15rem; margin-bottom: 6px; }
+
+    /* Closing band */
+    .band { background: var(--navy); color: var(--white); text-align: center; }
+    .band h2 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); margin-bottom: 12px; }
+    .band p { max-width: 600px; margin: 0 auto 26px; }
+
+    footer { background: #0F1829; color: #C9D3E3; font-size: .85rem; padding: 28px 0; text-align: center; }
+    footer a { color: var(--turquoise); }
+
+    @media (max-width: 520px) {
+      .btn-outline { margin-left: 0; margin-top: 10px; }
+      nav ul { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <div class="wrap">
+      <a href="index.html" class="brand"><img src="nextplay-logo-white.png" alt="Nextplay Youth Network home" style="height:40px;display:block;"></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="join.html#volunteer">Volunteer</a></li>
+        <li><a href="donate.html" class="nav-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1>Give the Gift of Play</h1>
+      <p>Your gift funds mentorship, sensory-friendly events, and real opportunities for youth in Lansing and the south suburbs.</p>
+      <a href="https://www.zeffy.com/en-US/donation-form/support-nextplay-youth-network" class="btn btn-gold" target="_blank" rel="noopener">Donate Now</a>
+      <a href="https://www.zeffy.com/en-US/donation-form/support-nextplay-youth-network" class="btn btn-outline" target="_blank" rel="noopener">Give Monthly</a>
+      <p class="trust">Nextplay Youth Network is a 501(c)(3) nonprofit. Donations are tax-deductible to the extent allowed by law.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">What Your Gift Does</h2>
+      <p class="section-sub">Every dollar stays local and goes directly into programs for kids and teens.</p>
+      <div class="tiers">
+        <div class="tier"><div class="amt">$25</div><p>Supplies for one hands-on activity kit, from STEM projects to garden learning.</p></div>
+        <div class="tier"><div class="amt">$50</div><p>A full month of mentorship sessions for one youth.</p></div>
+        <div class="tier"><div class="amt">$100</div><p>Covers admission for youth at a sensory-friendly community event.</p></div>
+        <div class="tier"><div class="amt">$250</div><p>Sponsors a peer mentor in our Bridge Division for a season.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="divisions">
+    <div class="wrap">
+      <h2 class="section-title">Choose Where It Goes</h2>
+      <p class="section-sub">Give where we need it most, or direct your gift to a specific division when you check out.</p>
+      <div class="div-grid">
+        <div class="div-card sprouts"><h3>The Sprouts</h3><div class="who">Elementary</div><p>Play-based learning and early confidence building for our youngest members.</p></div>
+        <div class="div-card crown"><h3>The Crown</h3><div class="who">Girls Mentorship</div><p>Leadership, self-worth, and sisterhood for girls growing into who they are.</p></div>
+        <div class="div-card compass"><h3>The Compass</h3><div class="who">Boys Mentorship</div><p>Direction, discipline, and positive role models for boys finding their path.</p></div>
+        <div class="div-card bridge"><h3>Bridge Division</h3><div class="who">High School Peer Mentors</div><p>Teens building leadership skills by mentoring younger youth.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">More Ways to Give</h2>
+      <p class="section-sub">Not every gift is a dollar amount. Here is how else you can help.</p>
+      <div class="ways">
+        <div class="way"><h3>Sponsor an Event</h3><p>Businesses can sponsor a jump night, clinic, or community event and be recognized as a partner.</p></div>
+        <div class="way"><h3>Give In Kind</h3><p>Sports equipment, sensory tools, art and STEM supplies, and snacks for program days are always welcome.</p></div>
+        <div class="way"><h3>Volunteer</h3><p>Share your time and skills as a mentor, event helper, or workshop leader. <a href="join.html#volunteer">Sign up here</a>.</p></div>
+        <div class="way"><h3>Mail a Check</h3><p>Make checks payable to Nextplay Youth Network. Email us for our mailing address.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Every Child Deserves a Next Play</h2>
+      <p>Questions about giving, sponsorships, or matching gifts? Reach out at <a href="mailto:nicole@nextplayyouthnetwork.org">nicole@nextplayyouthnetwork.org</a>.</p>
+      <a href="https://www.zeffy.com/en-US/donation-form/support-nextplay-youth-network" class="btn btn-gold" target="_blank" rel="noopener">Donate Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>Nextplay Youth Network is a 501(c)(3) tax-exempt organization. EIN available upon request.<br>
+      No goods or services are provided in exchange for contributions unless otherwise stated in your receipt.</p>
+      <p style="margin-top:10px;">&copy; 2026 Nextplay Youth Network &middot; Lansing, Illinois &middot; <a href="index.html">Home</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
